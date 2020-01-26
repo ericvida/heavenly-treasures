@@ -1514,9 +1514,9 @@ function extendTag$$1(el,cls){
 		((!b$0||d$0&2) && t$0.flagSelf$('app-header'));
 		b$0 || (t$1=imba.createElement('nav',0,t$0,null,null,null));
 		b$0 || (t$2=imba.createElement('a',0,t$1,null,"home",null));
-		b$0 || (t$2.href="/public");
+		b$0 || (t$2.href="/");
 		b$0 || (t$2=imba.createElement('a',0,t$1,null,"donate",null));
-		b$0 || (t$2=imba.createElement('a',0,t$1,null,"about",null));
+		b$0 || (t$2.href="mailto:tiradomission@gmail.com");
 		t$0.close$(d$0);
 		return t$0;
 	}

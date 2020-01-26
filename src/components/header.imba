@@ -2,9 +2,8 @@ tag app-header < header
   def render
     <self.app-header>
       <nav> 
-        <a href="/public"> "home"
-        <a> "donate"
-        <a> "about"
+        <a href="/"> "home"
+        <a href="mailto:tiradomission@gmail.com"> "donate"
 
 ### css
 .app-header nav {
