@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -c --watch",
+    "serve": "parcel public/index.html",
+    "check-version": "imbac --version"
+  },
+  "dependencies": {
+    "flickity": "^2.2.1",
+    "imba": "^2.0.0-alpha.22",
+    "imba-rollup": "^1.0.3"
+  },
+  "devDependencies": {
+    "rollup-plugin-sass": "^1.2.2"
+  }
+}
