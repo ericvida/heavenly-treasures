@@ -1,6 +1,5 @@
 import './progress-bar'
 
-console.log(acronym)
 tag person-card
 	@sumGoal = 0
 	@sumDonations = 0
