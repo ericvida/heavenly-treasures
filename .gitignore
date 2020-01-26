@@ -1,4 +1,4 @@
-public/bundle.*
+# public/bundle.*
 
 .DS_Store
 
