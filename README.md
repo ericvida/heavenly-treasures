@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/13903f37-69b4-442d-9cc6-8e772d699aaf/deploy-status)](https://app.netlify.com/sites/tirado-heavenly-treasures/deploys)
+
 Get started by running the following commands
 
 ```
