@@ -1145,8 +1145,14 @@ var treasures = [
 		"She already has a piece of land, and the basic structure of her home, but she still needs some materials to finish the walls and floor, and to plant a little garden to eat from, and sell produce from it at the market."
 	],
 	needs: [
-		{name: "Wood to complete building her home",
-		price: 3000,
+		{name: "4 cubic meters of wood - $300 each",
+		price: 1200,
+		done: true},
+		{name: "bathroom: toilet, shower, pipes, cement, etc",
+		price: 1500,
+		done: false},
+		{name: "House electrical",
+		price: 150,
 		done: false}
 	],
 	donors: [
@@ -1185,7 +1191,9 @@ var treasures = [
 		{name: "Miriam Dominguez",
 		donation: 20},
 		{name: "Ivette Figueroa",
-		donation: 500}
+		donation: 500},
+		{name: "Eric Tirado",
+		donation: 200}
 	]},
 	{name: "Azim",
 	image: ["azim"],
@@ -1330,7 +1338,7 @@ class PersonCardComponent extends imba.tags.get('component','ImbaElement') {
 		return $3.has(this) ? $3.get(this) : 0;
 	}
 	render(){
-		var t$0, c$0, b$0, d$0, t$1, k$1, c$1, t$2, b$2, d$2, v$2, b$1, d$1, v$1, t$3, k$3, c$3, t$4, b$4, d$4, c$4, v$4, v$3, k$4, t$5, k$5, b$5, d$5, c$5, v$5;
+		var t$0, c$0, b$0, d$0, t$1, k$1, c$1, t$2, b$2, d$2, v$2, b$1, d$1, v$1, t$3, k$3, c$3, t$4, b$4, d$4, c$4, v$4, v$3, k$4, t$5, k$5, b$5, d$5, c$5, t$6, v$6, v$5;
 		t$0=this;
 		t$0.open$();
 		c$0 = (b$0=d$0=1,t$0.$) || (b$0=d$0=0,t$0.$={});
@@ -1386,43 +1394,49 @@ class PersonCardComponent extends imba.tags.get('component','ImbaElement') {
 			item = items[i];
 			if (item.done === true) {
 				k$5='r$' + k$4;
-				t$5 = (b$5=d$5=1,c$4[k$5]) || (b$5=d$5=0,c$4[k$5] = t$5=imba.createElement('li',4096,t$4,'done',null,null));
+				t$5 = (b$5=d$5=1,c$4[k$5]) || (b$5=d$5=0,c$4[k$5] = t$5=imba.createElement('li',0,t$4,'done',null,null));
 				b$5||(t$5.up$=t$4);
 				c$5=t$5.$r || (t$5.$r={});
-				(v$5=item.name + " $" + item.price,v$5===c$5.s || (c$5.s_ = t$5.insert$(c$5.s=v$5,0,c$5.s_)));
+				t$6 = c$5.s || (c$5.s = t$6=imba.createElement('b',4096,t$5,null,null,null));
+				(v$6="$" + item.price + " ",v$6===c$5.t || (c$5.t_ = t$6.insert$(c$5.t=v$6,0,c$5.t_)));
+				t$6 = c$5.u || (c$5.u = t$6=imba.createElement('span',4096,t$5,null,null,null));
+				(v$6=item.name,v$6===c$5.v || (c$5.v_ = t$6.insert$(c$5.v=v$6,0,c$5.v_)));
 				t$4.push(t$5,k$4++,k$5);
 			} else {
-				k$5='t$' + k$4;
-				t$5 = (b$5=d$5=1,c$4[k$5]) || (b$5=d$5=0,c$4[k$5] = t$5=imba.createElement('li',4096,t$4,null,null,null));
+				k$5='w$' + k$4;
+				t$5 = (b$5=d$5=1,c$4[k$5]) || (b$5=d$5=0,c$4[k$5] = t$5=imba.createElement('li',0,t$4,null,null,null));
 				b$5||(t$5.up$=t$4);
-				c$5=t$5.$t || (t$5.$t={});
-				(v$5=item.name + " $" + item.price,v$5===c$5.u || (c$5.u_ = t$5.insert$(c$5.u=v$5,0,c$5.u_)));
+				c$5=t$5.$w || (t$5.$w={});
+				t$6 = c$5.x || (c$5.x = t$6=imba.createElement('b',4096,t$5,null,null,null));
+				(v$6="$" + item.price + " ",v$6===c$5.y || (c$5.y_ = t$6.insert$(c$5.y=v$6,0,c$5.y_)));
+				t$6 = c$5.z || (c$5.z = t$6=imba.createElement('span',4096,t$5,null,null,null));
+				(v$6=item.name,v$6===c$5.aa || (c$5.aa_ = t$6.insert$(c$5.aa=v$6,0,c$5.aa_)));
 				t$4.push(t$5,k$4++,k$5);
 			}		}t$4.end$(k$4);
 		b$0 || (t$3=imba.createElement('b',0,t$2,null,"Total Goal: ",null));
-		t$3 = c$0.v || (c$0.v = t$3=imba.createElement('span',4096,t$2,null,null,null));
-		(v$3="$" + this.sumGoal,v$3===c$0.w || (c$0.w_ = t$3.insert$(c$0.w=v$3,0,c$0.w_)));
+		t$3 = c$0.ab || (c$0.ab = t$3=imba.createElement('span',4096,t$2,null,null,null));
+		(v$3="$" + this.sumGoal,v$3===c$0.ac || (c$0.ac_ = t$3.insert$(c$0.ac=v$3,0,c$0.ac_)));
 		b$0 || (t$2=imba.createElement('div',0,t$1,'card__donors',null,null));
 		b$0 || (t$3=imba.createElement('h3',0,t$2,null,"Donors",null));
-		t$3 = c$0.x || (c$0.x = t$3=imba.createElement('div',2048,t$2,null,null,null));
-		t$4 = c$0.y || (c$0.y = t$4 = imba.createIndexedFragment(0,t$3));
+		t$3 = c$0.ad || (c$0.ad = t$3=imba.createElement('div',2048,t$2,null,null,null));
+		t$4 = c$0.ae || (c$0.ae = t$4 = imba.createIndexedFragment(0,t$3));
 		k$4 = 0;
 		c$4=t$4.$;
 		for (let i = 0, items = iter$$4(this.data.donors), len = items.length, item; i < len; i++) {
 			item = items[i];
 			t$5 = (b$5=d$5=1,c$4[k$4]) || (b$5=d$5=0,c$4[k$4] = t$5=imba.createElement('span',4096,t$4,null,null,null));
 			b$5||(t$5.up$=t$4);
-			c$5=t$5.$z || (t$5.$z={});
-			(v$5=item.name.match(/\b(\w)/g).join('.').toUpperCase() + ". $" + item.donation + ", ",v$5===c$5.aa || (c$5.aa_ = t$5.insert$(c$5.aa=v$5,0,c$5.aa_)));
+			c$5=t$5.$af || (t$5.$af={});
+			(v$5=item.name.match(/\b(\w)/g).join('.').toUpperCase() + ". $" + item.donation + ", ",v$5===c$5.ag || (c$5.ag_ = t$5.insert$(c$5.ag=v$5,0,c$5.ag_)));
 			k$4++;
 		}t$4.end$(k$4);
 		b$0 || (t$3=imba.createElement('p',0,t$2,null,null,null));
 		b$0 || (t$4=imba.createElement('b',0,t$3,null,"Total Donations: ",null));
-		t$4 = c$0.ab || (c$0.ab = t$4=imba.createElement('span',4096,t$3,null,null,null));
-		(v$4="$" + this.sumDonations,v$4===c$0.ac || (c$0.ac_ = t$4.insert$(c$0.ac=v$4,0,c$0.ac_)));
-		t$2 = (b$2=d$2=1,c$0.ad) || (b$2=d$2=0,c$0.ad=t$2=imba.createElement('a',4096,t$1,'button',null,null));
-		(v$2=("mailto:tiradomission@gmail.com?subject=I would like to support " + (this.data.name.charAt(0).toUpperCase() + this.data.name.slice(1)) + "!&body=Hello my name is NAME,%0D%0AI would like to support " + (this.data.name) + " with AMOUNT."),v$2===c$0.ae || (t$2.href=c$0.ae=v$2));
-		(v$2=("SUPPORT " + this.data.name.toUpperCase() + " DIRECTLY"),v$2===c$0.af || (c$0.af_ = t$2.insert$(c$0.af=v$2,0,c$0.af_)));
+		t$4 = c$0.ah || (c$0.ah = t$4=imba.createElement('span',4096,t$3,null,null,null));
+		(v$4="$" + this.sumDonations,v$4===c$0.ai || (c$0.ai_ = t$4.insert$(c$0.ai=v$4,0,c$0.ai_)));
+		t$2 = (b$2=d$2=1,c$0.aj) || (b$2=d$2=0,c$0.aj=t$2=imba.createElement('a',4096,t$1,'button',null,null));
+		(v$2=("mailto:tiradomission@gmail.com?subject=I would like to support " + (this.data.name.charAt(0).toUpperCase() + this.data.name.slice(1)) + "!&body=Hello my name is NAME,%0D%0AI would like to support " + (this.data.name) + " with AMOUNT."),v$2===c$0.ak || (t$2.href=c$0.ak=v$2));
+		(v$2=("SUPPORT " + this.data.name.toUpperCase() + " DIRECTLY"),v$2===c$0.al || (c$0.al_ = t$2.insert$(c$0.al=v$2,0,c$0.al_)));
 		t$0.close$(d$0);
 		return t$0;
 	}

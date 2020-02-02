@@ -46,8 +46,16 @@ export var treasures = [
 		"She already has a piece of land, and the basic structure of her home, but she still needs some materials to finish the walls and floor, and to plant a little garden to eat from, and sell produce from it at the market."
 		]
 	needs: [
-		name: "Wood to complete building her home"
-		price: 3000
+		name: "4 cubic meters of wood - $300 each"
+		price: 1200
+		done: yes
+		---
+		name: "bathroom: toilet, shower, pipes, cement, etc"
+		price: 1500
+		done: no
+		---
+		name: "House electrical"
+		price: 150
 		done: no
 		]
 	donors: [
@@ -104,6 +112,9 @@ export var treasures = [
 		---
 		name: "Ivette Figueroa"
 		donation: 500
+		---
+		name: "Eric Tirado"
+		donation: 200
 		]
 	---
 	name: "Azim"

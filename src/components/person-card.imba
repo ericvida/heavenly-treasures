@@ -30,9 +30,13 @@ tag person-card
 						for item in @data.needs
 							# If project is completed add class of yes.
 							if item.done is yes
-								<li.done> item.name + " $" + item.price
+								<li.done> 
+									<b> "$"+ item.price + " "
+									<span> item.name
 							else
-								<li> item.name + " $" + item.price
+								<li> 
+									<b> "$"+ item.price + " "
+									<span> item.name
 					<b> "Total Goal: "
 					<span> "$"+@sumGoal
 				<div.card__donors>
